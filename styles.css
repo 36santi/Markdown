@@ -1,0 +1,91 @@
+:root{
+  --bg:#f5f7fb;
+  --card:#ffffff;
+  --accent:#2563eb;
+  --text:#1f2937;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Arial, Helvetica, sans-serif;
+  background:var(--bg);
+  color:var(--text);
+}
+
+.container{
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  padding:2rem;
+}
+
+.header{
+  font-size:1.5rem;
+  font-weight:700;
+  margin-bottom:1rem;
+}
+
+.main{
+  width:100%;
+  max-width:1100px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:1rem;
+  align-items:start;
+}
+
+.editor-panel, .preview-panel{
+  background:var(--card);
+  border-radius:10px;
+  padding:1rem;
+  box-shadow:0 6px 18px rgba(20,20,50,0.06);
+  display:flex;
+  flex-direction:column;
+  min-height:420px;
+}
+
+.panel-title{
+  font-weight:600;
+  margin-bottom:0.5rem;
+  color:var(--accent);
+}
+
+#editor{
+  flex:1;
+  width:100%;
+  resize:vertical;
+  min-height:320px;
+  padding:0.9rem;
+  border-radius:8px;
+  border:1px solid #e6e9ef;
+  font-family:monospace;
+  font-size:0.95rem;
+  line-height:1.45;
+}
+
+#preview{
+  flex:1;
+  min-height:320px;
+  padding:0.9rem;
+  border-radius:8px;
+  border:1px solid #e6e9ef;
+  overflow:auto;
+}
+
+/* estilos básicos para el html generado por marked */
+#preview h1{font-size:1.4rem;margin:0 0 .4rem}
+#preview h2{font-size:1.15rem;margin:0 0 .4rem}
+#preview p{margin:0 0 .6rem}
+#preview pre{background:#0b1220;color:#e6f0ff;padding:0.8rem;border-radius:6px;overflow:auto}
+#preview code{background:#f3f4f6;padding:2px 6px;border-radius:4px;font-family:monospace}
+#preview blockquote{border-left:4px solid #c7d2fe;padding-left:0.8rem;color:#374151;margin:0 0 .6rem}
+#preview img{max-width:100%;height:auto;border-radius:6px}
+#preview ul{margin:0 0 .6rem;padding-left:1.2rem}
+
+/* responsive */
+@media (max-width:900px){
+  .main{grid-template-columns:1fr; padding-bottom:1rem}
+}
+.footer{margin-top:1rem;color:#6b7280;font-size:0.9rem}
